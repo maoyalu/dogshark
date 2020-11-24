@@ -1,6 +1,13 @@
 import { Component, OnInit, Input, ElementRef } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
+export interface RoomInfo {
+  data: {
+    user_cover: string;
+    live_status: number;
+  }
+}
+
 @Component({
   selector: 'app-live-room',
   templateUrl: './live-room.component.html',
@@ -33,7 +40,7 @@ export class LiveRoomComponent implements OnInit {
   getStreamInfo() {
     let headers = new HttpHeaders();
     headers.append('Content-Type', 'application/json');
-    return this.http.get(`https://api.live.bilibili.com/room/v1/Room/get_info?room_id=${this.roomId}`, {headers: headers})
+    return this.http.get<RoomInfo>(`https://api.live.bilibili.com/room/v1/Room/get_info?room_id=${this.roomId}`, {headers: headers})
   }
 
   close() {
