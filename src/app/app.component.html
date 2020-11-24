@@ -5,7 +5,7 @@
   <span>Yalu Studio</span>
 </mat-toolbar>
 <mat-drawer-container class="container" autosize>
-  <mat-drawer #drawer mode="side" opened="true">
+  <mat-drawer #drawer mode="over" opened="false">
     <mat-nav-list>
       <mat-list-item routerLink="/" routerLinkActive="active" id="Home"><mat-icon>dashboard</mat-icon>Dashboard</mat-list-item>
       <mat-expansion-panel [class.mat-elevation-z0]="true" dense>
@@ -18,7 +18,8 @@
         </mat-nav-list>
     </mat-expansion-panel>
       <mat-list-item routerLink="/general" routerLinkActive="active"><mat-icon>check_box</mat-icon>General</mat-list-item>
-      <mat-list-item routerLink="#"><mat-icon>person</mat-icon>Profile</mat-list-item>
+      <mat-list-item routerLink="/about"><mat-icon>person</mat-icon>Profile</mat-list-item>
+      <mat-list-item routerLink="#"><mat-icon>notification_important</mat-icon>Projects</mat-list-item>
       <mat-list-item routerLink="#"><mat-icon>notification_important</mat-icon>Notification</mat-list-item>
       <mat-expansion-panel [class.mat-elevation-z0]="true" dense>
           <mat-expansion-panel-header>
@@ -41,6 +42,7 @@
     </mat-nav-list>
   </mat-drawer>
   <mat-drawer-content>
+    <img id="logo" src="assets/images/logo.png" ondragstart="return false;">
     <router-outlet></router-outlet>
   </mat-drawer-content>
 </mat-drawer-container>

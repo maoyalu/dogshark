@@ -1,0 +1,21 @@
+h1 {
+  text-align: center;
+}
+
+mat-card{
+  width: 300px;
+  margin: 20px;
+  filter: drop-shadow(2px 2px 2px black);
+}
+
+.logo_button {
+  width: 130px;
+  border-radius: 25px;
+}
+
+a{
+  display: inline-block;
+  width: 130px;
+  height:40px;
+  margin: 10px;
+}

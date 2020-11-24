@@ -9,6 +9,9 @@ import {MatCardModule} from '@angular/material/card';
 import {MatListModule} from '@angular/material/list';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {DragDropModule} from '@angular/cdk/drag-drop';
 
 const materialModules = [
   MatToolbarModule,
@@ -18,8 +21,11 @@ const materialModules = [
   MatIconModule,
   MatCardModule,
   MatListModule,
-  MatDatepickerModule，
-  MatNativeDateModule
+  MatDatepickerModule,
+  MatNativeDateModule,
+  MatFormFieldModule,
+  MatInputModule,
+  DragDropModule
 ];
 
 @NgModule({
